@@ -1,7 +1,7 @@
 name: Auto Build
 on:
   push:
-    branches: [ master ]
+    branches: [ deploy ]
 
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
       - name: Check the contents of the file
         uses: actions/checkout@v1
         with:
-          ref: 'master'
+          ref: 'deploy'
 
       - name: Configration on Ubuntu 18.04
         uses: actions/setup-node@v1
